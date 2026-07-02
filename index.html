@@ -5,11 +5,49 @@
     <title>Weapon Triangle Game</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
+    <header>
+        <h1>Weapon Triangle Game</h1>
+    </header>
+    <main>
+        <div class="score-board">
+            <div id="user-label">User</div>
+            <div class="score-container">
+                <span id="user-score">0</span>:<span id="computer-score">0</span>
+            </div>
+            <div id="computer-label">Computer</div>
+        </div>
+        <div class="rules-container">
+            <div class="rules-text">
+                <h2>Rules:</h2>
+                <p>Lance beats Sword.<br>Sword beats Axe. <br>Axe beats Lance.</p>
+                <p>First to 5 wins.</p>
+            </div>
+        </div>
+        <p>Choose your weapon!</p>
+        <div class="weapon-container">
+            <img src="images/lance.png" alt="Lance" id="lance" class="weapon-img">
+            <img src="images/sword.png" alt="Sword" id="sword" class="weapon-img">
+            <img src="images/axe.png" alt="Axe" id="axe" class="weapon-img">
+        </div>
+    </main>
+    <footer>
+        <p>Created by <a href="https://github.com/Bayoura" target="_blank">Bayoura</a></p>
+        <p>Image by <a
+                href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=23663"
+                target="_blank">Clker-Free-Vector-Images</a>
+            from <a
+                href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=23663"
+                target="_blank">Pixabay</a>
+        </p>
+        <p>
+            The logos were designed at <a href="https://logomakr.com/" target="_blank">LogoMakr.com</a>.
+        </p>
+    </footer>
 </body>
 
 </html>

@@ -14,15 +14,17 @@
         <h1>Weapon Triangle Game</h1>
     </header>
     <main>
-        <div class="score-board">
-            <div id="user-label">User</div>
-            <div class="score-container">
+        <section class="score-board">
+            <span id="user-label">User</span>
+            <div class="score-container" aria-live="polite">
                 <span id="user-score">0</span>:<span id="computer-score">0</span>
             </div>
-            <div id="computer-label">Computer</div>
-        </div>
-        <aside class="rules-container">
-            <div class="rules-text">
+            <span id="computer-label">Computer</span>
+        </section>
+        <div class="round-result">You win this round!</div>
+        <!-- You win / Computer wins / Draw / Computer choosing ... -->
+        <section class="game-container">
+            <aside class="rules-container">
                 <h2>Rules:</h2>
                 <ul>
                     <li>Lance beats Sword.</li>
@@ -30,14 +32,16 @@
                     <li>Axe beats Lance.</li>
                 </ul>
                 <p>First to 5 wins.</p>
+            </aside>
+            <div class="weapon-selection-container">
+                <h2>Choose your weapon!</h2>
+                <ul class="weapon-container">
+                    <li><img src="images/lance.png" alt="Lance" id="lance" class="weapon-img"></li>
+                    <li><img src="images/sword.png" alt="Sword" id="sword" class="weapon-img"></li>
+                    <li><img src="images/axe.png" alt="Axe" id="axe" class="weapon-img"></li>
+                </ul>
             </div>
-        </aside>
-        <p>Choose your weapon!</p>
-        <div class="weapon-container">
-            <img src="images/lance.png" alt="Lance" id="lance" class="weapon-img">
-            <img src="images/sword.png" alt="Sword" id="sword" class="weapon-img">
-            <img src="images/axe.png" alt="Axe" id="axe" class="weapon-img">
-        </div>
+        </section>
     </main>
     <footer>
         <p>Created by <a href="https://github.com/Bayoura" target="_blank">Bayoura</a></p>

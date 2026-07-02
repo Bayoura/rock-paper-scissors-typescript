@@ -14,6 +14,15 @@
     --color-light-red: #FCEFEE;
 
     --size-header: 80px;
+
+    --size-veryBig: 3rem;
+    /* 48px */
+    --size-big: 2.25rem;
+    /* 36px */
+    --size-medium: 1.5rem;
+    /* 24px */
+    --size-small: 1.125rem;
+    /* 18px */
 }
 
 * {
@@ -37,6 +46,7 @@ header {
 header>h1 {
     text-align: center;
     font-family: Cinzel, sans-serif;
+    font-size: var(--size-big);
     line-height: var(--size-header);
     /* header is var(--size-header) high, so this will center the text vertically */
 }
@@ -46,11 +56,13 @@ header>h1 {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    font-size: var(--size-medium);
 }
 
 .score-container {
     display: flex;
     gap: 5px;
+    font-size: var(--size-big);
 }
 
 .rules-container {
@@ -72,16 +84,23 @@ header>h1 {
 .rules-text {
     text-align: center;
     font-family: Lato, sans-serif;
+    font-size: var(--size-small);
     padding-left: 15%;
 }
 
 .rules-text>h2 {
     margin-bottom: 10px;
     font-family: Cinzel, sans-serif;
+    font-size: var(--size-medium);
     text-decoration: underline;
 }
 
-.rules-text :nth-child(3) {
+.rules-text>ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.rules-text p{
     font-weight: 700;
     margin-top: 20px;
 }

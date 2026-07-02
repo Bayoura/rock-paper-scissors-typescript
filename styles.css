@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@100;400;500;700&display=swap');
+@import url('variables.css');
+
+:root {
+    --color-primary: #e8e4d4;
+    --color-green: #237829;
+    --color-light-green: #F0FAF1;
+    --color-medium-green: #E0F5E2;
+    --color-blue: #182b9f;
+    --color-light-blue: #EDEFFC;
+    --color-medium-blue: #DCE0FA;
+    --color-red: #c03220;
+    --color-medium-red: #f9dfdc;
+    --color-light-red: #FCEFEE;
+
+    --size-header: 80px;
+}
 
 * {
     padding: 0;
@@ -8,6 +24,107 @@
 
 body {
     min-height: 100vh;
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(255, 255, 247);
     font-family: Montserrat, sans-serif;
+}
+
+header {
+    height: var(--size-header);
+    background-color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+header>h1 {
+    text-align: center;
+    font-family: Cinzel, sans-serif;
+    line-height: var(--size-header);
+    /* header is var(--size-header) high, so this will center the text vertically */
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.score-container {
+    display: flex;
+    gap: 5px;
+}
+
+.rules-container {
+    background-image: url("images/scroll.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 3 / 4;
+    /* Maintains fixed width-to-height ratio */
+    height: 350px;
+    /* Works with aspect-ratio. Only the height needs to be specified, width will be calculated automatically */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 90px 30px;
+    border: 1px solid black;
+}
+
+.rules-text {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    padding-left: 15%;
+}
+
+.rules-text>h2 {
+    margin-bottom: 10px;
+    font-family: Cinzel, sans-serif;
+    text-decoration: underline;
+}
+
+.rules-text :nth-child(3) {
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/*-------------------------WEAPON-IMAGES-----------------------------*/
+
+.weapon-img {
+    width: 150px;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 100%;
+}
+
+.weapon-img:hover {
+    transform: scale(1.05);
+}
+
+#lance {
+    background-color: var(--color-light-blue);
+    border-color: var(--color-light-blue);
+}
+
+#lance:hover {
+    background-color: var(--color-medium-blue);
+    border-color: var(--color-medium-blue);
+}
+
+#sword {
+    background-color: var(--color-light-red);
+    border-color: var(--color-light-red);
+}
+
+#sword:hover {
+    background-color: var(--color-medium-red);
+    border-color: var(--color-medium-red);
+}
+
+#axe {
+    background-color: var(--color-light-green);
+    border-color: var(--color-light-green);
+}
+
+#axe:hover {
+    background-color: var(--color-medium-green);
+    border-color: var(--color-medium-green);
 }

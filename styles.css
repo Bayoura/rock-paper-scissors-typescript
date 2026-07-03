@@ -14,10 +14,8 @@
     --color-light-red: #FCEFEE;
 
     --size-header: 80px;
-    --size-scroll: 340px;
+    --size-scroll: 460px;
 
-    --size-veryBig: 3rem;
-    /* 48px */
     --size-big: 2.25rem;
     /* 36px */
     --size-medium: 1.5rem;
@@ -36,17 +34,19 @@
 
 body {
     min-height: 100vh;
-    /* background-color: rgb(255, 255, 247); */
     background-color: #e7e3da;
     color: #2b2b2b;
     font-family: Lato, sans-serif;
+    display: flex;
+    /* Creates a vertical layout so the footer can stay at the bottom */
+    flex-direction: column;
 }
 
 header {
     height: var(--size-header);
     background-color: #2e3b3a;
     color: #e9e6dc;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 header>h1 {
@@ -55,6 +55,11 @@ header>h1 {
     font-size: var(--size-big);
     line-height: var(--size-header);
     /* header is var(--size-header) high, so this will center the text vertically */
+}
+
+main {
+    flex: 1;
+    /* Fills remaining space and pushes the footer to the bottom */
 }
 
 /*-------------------------SCORE-BOARD-----------------------------*/
@@ -83,7 +88,7 @@ header>h1 {
 .round-result {
     text-align: center;
     font-size: var(--size-small);
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 /*-------------------------RULES-----------------------------*/
@@ -105,11 +110,11 @@ header>h1 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 90px;
+    padding-top: 120px;
     padding-left: 2%;
     text-align: center;
     font-size: var(--size-small);
-        filter: drop-shadow(0 6px 2px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(0 6px 2px rgba(0, 0, 0, 0.4));
 }
 
 .rules-container>h2 {
@@ -137,6 +142,7 @@ header>h1 {
     justify-content: center;
     align-items: center;
     min-height: var(--size-scroll);
+    margin-top: 40px;
 }
 
 .weapon-selection-container {
@@ -148,15 +154,16 @@ header>h1 {
 }
 
 .weapon-container {
+    margin-top: 20px;
     display: flex;
-    gap: 32px;
+    gap: 60px;
     list-style: none;
 }
 
 /*-------------------------WEAPON-IMAGES-----------------------------*/
 
 .weapon-img {
-    width: 150px;
+    width: 200px;
     cursor: pointer;
     border: 2px solid;
     border-radius: 100%;
@@ -204,4 +211,97 @@ footer {
     text-align: center;
     font-size: var(--size-verySmall);
     margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/*-------------------------BREAKPOINTS-----------------------------*/
+
+@media (max-width: 1440px) {
+    .rules-container {
+        height: 340px;
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .rules-container {
+        position: static;
+    }
+
+    .game-container {
+        justify-content: flex-start;
+        position: static;
+        gap: 60px;
+    }
+
+    .weapon-container {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 986px) {
+    .game-container {
+        gap: 20px;
+    }
+
+    .weapon-img {
+        width: 170px;
+    }
+}
+
+@media (max-width: 855px) {
+    header {
+        margin-bottom: 20px;
+    }
+
+    .round-result {
+        margin-top: 5px;
+    }
+
+    .game-container {
+        margin-top: 20px;
+        gap: 0;
+    }
+
+    .weapon-container {
+        gap: 5px;
+    }
+
+    .weapon-img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 724px) {
+    .game-container {
+        flex-direction: column-reverse;
+    }
+
+    .weapon-img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 468px) {
+    header {
+        margin-bottom: 10px;
+    }
+
+    header>h1 {
+        font-size: var(--size-medium);
+    }
+
+    .game-container {
+        margin-top: 20px;
+        gap: 0;
+        flex-direction: column-reverse;
+    }
+
+    .weapon-container {
+        gap: 5px;
+    }
+
+    .weapon-img {
+        width: 120px;
+    }
 }

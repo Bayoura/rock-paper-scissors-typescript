@@ -85,7 +85,7 @@ main {
     padding: 0 40px;
 }
 
-.round-result {
+#round-result {
     text-align: center;
     font-size: var(--size-small);
     margin-top: 15px;
@@ -227,7 +227,7 @@ footer {
         margin-bottom: 10px;
     }
 
-    .round-result {
+    #round-result {
         margin-top: 5px;
     }
 

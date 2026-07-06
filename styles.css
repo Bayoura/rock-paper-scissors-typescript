@@ -211,7 +211,6 @@ footer {
     text-align: center;
     font-size: var(--size-verySmall);
     margin-top: 20px;
-    margin-bottom: 5px;
 }
 
 /*-------------------------BREAKPOINTS-----------------------------*/
@@ -224,34 +223,8 @@ footer {
 }
 
 @media (max-width: 1280px) {
-    .rules-container {
-        position: static;
-    }
-
-    .game-container {
-        justify-content: flex-start;
-        position: static;
-        gap: 60px;
-    }
-
-    .weapon-container {
-        gap: 32px;
-    }
-}
-
-@media (max-width: 986px) {
-    .game-container {
-        gap: 20px;
-    }
-
-    .weapon-img {
-        width: 170px;
-    }
-}
-
-@media (max-width: 855px) {
     header {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .round-result {
@@ -259,16 +232,39 @@ footer {
     }
 
     .game-container {
-        margin-top: 20px;
+        min-height: 340px;
+        margin-top: 0;
+    }
+
+    .weapon-container {
+        gap: 32px;
+        margin-top: 0px;
+    }
+
+    .weapon-img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 986px) {
+    .game-container {
+        gap: 20px;
+        justify-content: flex-start;
+        position: static;
+    }
+
+    .rules-container {
+        position: static;
+    }
+}
+
+@media (max-width: 855px) {
+    .game-container {
         gap: 0;
     }
 
     .weapon-container {
         gap: 5px;
-    }
-
-    .weapon-img {
-        width: 150px;
     }
 }
 
@@ -283,25 +279,11 @@ footer {
 }
 
 @media (max-width: 468px) {
-    header {
-        margin-bottom: 10px;
-    }
-
     header>h1 {
         font-size: var(--size-medium);
     }
 
     .game-container {
-        margin-top: 20px;
-        gap: 0;
         flex-direction: column-reverse;
-    }
-
-    .weapon-container {
-        gap: 5px;
-    }
-
-    .weapon-img {
-        width: 120px;
     }
 }

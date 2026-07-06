@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@100;400;500;700&display=swap');
 
 :root {
-    --color-primary: #e8e4d4;
     --color-green: #237829;
     --color-light-green: #F0FAF1;
     --color-medium-green: #E0F5E2;
@@ -202,6 +201,40 @@ main {
 #axe:hover {
     background-color: var(--color-medium-green);
     border-color: var(--color-medium-green);
+}
+
+/*-------------------------GAME-OVER-OVERLAY-----------------------------*/
+
+#game-over-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-over-overlay:active {
+    display: flex;
+}
+
+.overlay-content {
+    background: #e8e4d4;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.overlay-content>h2 {
+    margin-bottom: 20px;
+}
+
+#restart-button {
+    padding: 10px 25px;
+    background-color: #2e3b3a;
+    color: #e9e6dc;
+    border-radius: 4px;
 }
 
 /*-------------------------FOOTER-----------------------------*/

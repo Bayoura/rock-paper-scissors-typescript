@@ -31,7 +31,6 @@ export class UI {
     }
 
     showGameOver(winner: string): void {
-        console.log("GAME OVER");
         const message: string = winner == "user" ? "You won!" : "Computer won!";
         this.winnerTextElement.textContent = message;
         this.showOverlay();
@@ -45,6 +44,7 @@ export class UI {
         this.overlayElement.classList.remove("active");
     }
 
+    // Receives a callback function from outside and executes it when the restart button is clicked
     onRestart(callback: () => void): void {
         this.restartButtonElement.addEventListener("click", callback);
     }

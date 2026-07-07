@@ -86,11 +86,12 @@ main {
 #round-result {
     text-align: center;
     font-size: var(--size-small);
+    min-height: 1.3rem;
+    font-weight: bold;
     margin-top: 15px;
 }
 
 /*-------------------------RULES-----------------------------*/
-
 
 .rules-container {
     background-image: url("images/scroll.svg");
@@ -158,7 +159,39 @@ main {
     list-style: none;
 }
 
+.weapon-container li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.marker {
+    font-size: 28px;
+}
+
+.user-marker {
+    color: blue;
+    visibility: hidden;
+
+}
+
+.user-marker.visible {
+    visibility: visible;
+}
+
+.computer-marker {
+    color: red;
+    visibility: hidden;
+
+}
+
+.computer-marker.visible {
+    visibility: visible;
+}
+
 /*-------------------------WEAPON-IMAGES-----------------------------*/
+
 
 .weapon-img {
     width: 200px;
@@ -171,6 +204,12 @@ main {
 
 .weapon-img:hover {
     transform: scale(1.1);
+}
+
+.weapon-img.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.8;
 }
 
 #lance {

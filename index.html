@@ -20,8 +20,7 @@
             </div>
             <span id="computer-label">Computer</span>
         </section>
-        <div id="round-result">You win this round!</div>
-        <!-- You win / Computer wins / Draw / Computer choosing ... -->
+        <p id="round-result"></p>
         <section class="game-container">
             <aside class="rules-container">
                 <h2>Rules:</h2>
@@ -33,11 +32,26 @@
                 <p>First to 5 wins.</p>
             </aside>
             <div class="weapon-selection-container">
-                <h2>Choose your weapon!</h2>
+                <p id="info-text">Choose your weapon...</p>
                 <ul class="weapon-container">
-                    <li><img src="images/lance.png" alt="Lance" id="lance" class="weapon-img"></li>
-                    <li><img src="images/sword.png" alt="Sword" id="sword" class="weapon-img"></li>
-                    <li><img src="images/axe.png" alt="Axe" id="axe" class="weapon-img"></li>
+                    <li><img src="images/lance.png" alt="Lance" id="lance" class="weapon-img">
+                        <div class="marker-container">
+                            <span class="user-marker marker">▲</span>
+                            <span class="computer-marker marker">▲</span>
+                        </div>
+                    </li>
+                    <li><img src="images/sword.png" alt="Sword" id="sword" class="weapon-img">
+                        <div>
+                            <span class="user-marker marker">▲</span>
+                            <span class="computer-marker marker">▲</span>
+                        </div>
+                    </li>
+                    <li><img src="images/axe.png" alt="Axe" id="axe" class="weapon-img">
+                        <div>
+                            <span class="user-marker marker">▲</span>
+                            <span class="computer-marker marker">▲</span>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>

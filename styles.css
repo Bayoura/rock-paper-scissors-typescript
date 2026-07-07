@@ -215,7 +215,7 @@ main {
     align-items: center;
 }
 
-#game-over-overlay:active {
+#game-over-overlay.active {
     display: flex;
 }
 
@@ -235,6 +235,7 @@ main {
     background-color: #2e3b3a;
     color: #e9e6dc;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 /*-------------------------FOOTER-----------------------------*/
